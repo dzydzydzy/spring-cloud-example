@@ -1,0 +1,17 @@
+server:
+  port: 9411
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: zipken-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 191016
+    driver-class-name: com.mysql.jdbc.Driver
+zipkin:
+  storage:
+    type: mysql
