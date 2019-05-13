@@ -1,6 +1,7 @@
 package com.hand.eurekaribbonclient.controller;
 
 import com.hand.eurekaribbonclient.service.RibbonService;
+import com.hand.eurekaribbonclient.service.RibbonServiceHystrix;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -17,15 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class RibbonController {
     @Autowired
     private RibbonService ribbonService;
+    @Autowired
+    private RibbonServiceHystrix ribbonServiceHystrix;
 
     @GetMapping("/hi")
-    @HystrixCommand(fallbackMethod = "hiFailback")
     public String hi() {
-        return ribbonService.hiFromClient();
-    }
-
-    public String hiFailback(){
-        return "Hystrix error";
+        return ribbonServiceHystrix.hiFromClient();
+        //return ribbonService.hiFromClient();
     }
 
     @Autowired

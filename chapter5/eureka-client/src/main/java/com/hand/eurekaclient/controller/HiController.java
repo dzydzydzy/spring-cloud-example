@@ -16,6 +16,6 @@ public class HiController {
 
     @GetMapping("/hi")
     public String hi(String name) {
-        return "hi " + name + ",I an from " + port;
+        return "hi " + name + ",I am from " + port;
     }
 }
