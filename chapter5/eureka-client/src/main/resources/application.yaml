@@ -10,9 +10,15 @@ spring:
   sleuth:
     sampler:
       percentage: 1.0
+  rabbitmq:
+    host:  #rabbitmq服务器ip地址
+    port:  #rabbitmq服务器端口
+    username: #rabbitmq服务器用户名
+    password: #rabbitmq服务器密码
 management:
   security:
     enabled: false
 logging:
   file: "logs/eureka-client.log"
+
 
