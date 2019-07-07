@@ -9,8 +9,6 @@ spring:
         git:
           uri: https://github.com/dzydzydzy/spring-cloud.git
           search-paths: eureka-client
-          username:
-          password:
       label: master
 eureka:
   client:

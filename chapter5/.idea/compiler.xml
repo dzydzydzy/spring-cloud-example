@@ -9,6 +9,7 @@
         <module name="admin-server" />
         <module name="api-gateway" />
         <module name="config-server" />
+        <module name="eureka-client" />
         <module name="eureka-feign-client" />
         <module name="eureka-monitor-client" />
         <module name="eureka-ribbon-client" />
